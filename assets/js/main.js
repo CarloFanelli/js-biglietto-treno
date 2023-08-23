@@ -29,19 +29,25 @@ let prezzoSenzaSconti = prezzoAlKm * kmPercorso;
 console.log(prezzoSenzaSconti);
 
 // verificare eventuali sconti
-let prezzoScontato;
+let prezzoFinale;
 
 if ( etaUtente < 18 ){
-    prezzoScontato = prezzoSenzaSconti * 0.8;
-    console.log(prezzoScontato.toFixed(2));
+    prezzoFinale = prezzoSenzaSconti * 0.8;
+    console.log(prezzoFinale.toFixed(2));
 
 } else if ( etaUtente >= 65 ){
-    prezzoScontato = prezzoSenzaSconti * 0.6;
-    console.log(prezzoScontato.toFixed(2));
+    prezzoFinale = prezzoSenzaSconti * 0.6;
+    console.log(prezzoFinale.toFixed(2));
 
 } else{
-    console.log(prezzoSenzaSconti.toFixed(2));
+    prezzoFinale=prezzoSenzaSconti;
+    console.log(prezzoFinale.toFixed(2));
 
 }
 
 // stampare il prezzo del biglietto
+
+const prezzoUtente = document.getElementById('prezzoUtente');
+ 
+
+prezzoUtente.innerHTML = prezzoFinale;
