@@ -33,15 +33,15 @@ let prezzoFinale;
 
 if ( etaUtente < 18 ){
     prezzoFinale = prezzoSenzaSconti * 0.8;
-    console.log(prezzoFinale.toFixed(2));
+    console.log(prezzoFinale);
 
 } else if ( etaUtente >= 65 ){
     prezzoFinale = prezzoSenzaSconti * 0.6;
-    console.log(prezzoFinale.toFixed(2));
+    console.log(prezzoFinale);
 
 } else{
     prezzoFinale=prezzoSenzaSconti;
-    console.log(prezzoFinale.toFixed(2));
+    console.log(prezzoFinale);
 
 }
 
@@ -50,4 +50,4 @@ if ( etaUtente < 18 ){
 const prezzoUtente = document.getElementById('prezzoUtente');
  
 
-prezzoUtente.innerHTML = prezzoFinale;
+prezzoUtente.innerHTML = prezzoFinale.toFixed(2);
